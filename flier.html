@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oakcliff Apartments Lease Takeover Flier</title>
+    <link rel="stylesheet" href="flier.css">
+</head>
+<body>
+    <div class="flier-container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <img src="images/logo.png" alt="Oakcliff Apartments" class="logo">
+            <h1 class="main-title">LEASE TAKEOVER AVAILABLE</h1>
+            <h2 class="subtitle">Luxe 1BR/1BA in Ann Arbor</h2>
+        </header>
+
+        <!-- Main Photo -->
+        <div class="main-photo">
+            <img src="images/living-room-kitchen.jpg" alt="Modern Living Room and Kitchen">
+        </div>
+
+        <!-- Key Details Section -->
+        <section class="details-section">
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="icon">📅</div>
+                    <div class="detail-content">
+                        <strong>Available:</strong><br>
+                        August 2025 - April 2026
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">💵</div>
+                    <div class="detail-content">
+                        <strong>Monthly Rent:</strong><br>
+                        $2,300+
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">📍</div>
+                    <div class="detail-content">
+                        <strong>Location:</strong><br>
+                        2225 Traverwood Dr<br>
+                        Ann Arbor, MI 48105
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="features-list">
+                <h3>Premium Features:</h3>
+                <ul>
+                    <li>Near U-M North Campus & major employers</li>
+                    <li>Resort-style amenities including pool & fitness center</li>
+                    <li>Pet-friendly community</li>
+                    <li>Modern kitchen with premium appliances</li>
+                    <li>Professionally cleaned before move-in</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Secondary Photo -->
+        <div class="secondary-photo">
+            <img src="images/pool.jpg" alt="Resort-Style Pool">
+            <p class="photo-caption">Resort-Style Pool & Sundeck</p>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-content">
+                <h3>Ready to Make This Your Home?</h3>
+                <div class="contact-steps">
+                    <p class="step"><strong>1.</strong> Call Oakcliff Office: <span class="phone">(734) 887-1371</span></p>
+                    <p class="step"><strong>2.</strong> Complete application ($10 fee)</p>
+                    <p class="step"><strong>3.</strong> Visit the website for more details</p>
+                </div>
+            </div>
+            <div class="qr-section">
+                <div class="qr-placeholder" id="qrcode"></div>
+                <p class="qr-text">Scan for details<br>takeovermylease.aquapony.com</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>This is a legitimate lease transfer through Oakcliff management</p>
+        </footer>
+    </div>
+
+    <!-- QR Code Generation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+        // Generate QR Code
+        var qr = qrcode(0, 'M');
+        qr.addData('https://takeovermylease.aquapony.com');
+        qr.make();
+        document.getElementById('qrcode').innerHTML = qr.createImgTag(4, 8);
+    </script>
+</body>
+</html>
